@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Usha Logistics Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Usha Logistics Dashboard</h1>
+
+    <p>
+      <strong>No of Deliveries:</strong>
+      <span id="kpi-count">
+        <!-- <span id="kpi-skeleton" class="skeleton skeleton-text">⏳</span> -->
+        <span id="kpi-value" style="display: none">Loading...</span>
+
+        
+      </span>
+    </p>
+
+    <button id="refresh-kpi" style="font-weight: bold; padding: 5px">
+          <span class="icon">🔄</span> KPI
+        </button>
+    <table id="fleet-table">
+      <thead>
+        <tr>
+          <th>Vehicle ID</th>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody id="fleet-skeleton">
+        <tr class="skeleton-row">
+          <td colspan="6"><div class="skeleton skeleton-block"></div></td>
+        </tr>
+        <tr class="skeleton-row">
+          <td colspan="6"><div class="skeleton skeleton-block"></div></td>
+        </tr>
+        <tr class="skeleton-row">
+          <td colspan="6"><div class="skeleton skeleton-block"></div></td>
+        </tr>
+      </tbody>
+      <tbody id="fleet-data" style="display: none"></tbody>
+    </table>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
